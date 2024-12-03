@@ -383,7 +383,7 @@ function cache_control_handle_redirects( $status, $location = NULL ) {
     if ( in_array( $status, array( "301", "302", "303", "307", "308" ) ) ) {
       if ( ob_start() ) {
         $location_attr = esc_attr( $location );
-        print("<!doctype html>\n<meta charset=\"utf-8\">\n<title>Document moved</title>\n<p>Document has <a href=\"${location_attr}\">moved here</a>.</p>");
+        print("<!doctype html>\n<meta charset=\"utf-8\">\n<title>Document moved</title>\n<p>Document has <a href=\"{$location_attr}\">moved here</a>.</p>");
     } }
 
     return $status;
